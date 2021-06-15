@@ -1,19 +1,25 @@
 {% extends "base.html" %} {% block content %} 
 {% load static %}
+{% load cloudinary %}
 
  <div class="header">
     <div class="header-right">
-      <img class="logo" src="{% static 'img/home.png' %}">Home</img>
-      <a href="#contact">Contact</a>
+      <img class="logo" src="{% static 'img/home.png' %}"></img>
+      <a href="#Home">Home</a>
+      <a href="{% url 'contacts' %}">Contact</a>
       <!-- <a href="#about">About</a> -->
     </div>
   </div>
 <section class="content">
     <section class="tweet_post">
-        <form action="/" method="POST">
+        <form action="/" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <input type="text" name="name" placeholder="Name" required>
-          <textarea name="body" name="Post here " placeholder="Name" required></textarea>
+          <textarea name="body" name="Post here " placeholder="wr" required></textarea>
+          {{form.image}}
+          <!-- <input type="file" value="add image" name='image'> -->
+          <!-- {{ form.image}}{{ form.image}} -here type is file is type so commented that ->
+-->
           <input type="submit" value="post">
 
 

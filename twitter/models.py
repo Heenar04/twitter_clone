@@ -9,3 +9,12 @@ class Tweetclone(models.Model):
     body = models.TextField(max_length=140)
     image = CloudinaryField('image', blank= True, null= True)
     created_at = models.DateTimeField(auto_now_add=True)   
+
+
+class Contact(models.Model):
+    class Meta(object):
+        db_table= 'contacts'
+    name = models.CharField(max_length=14)
+    email = models.EmailField(max_length=50, null=True, blank=True)
+    body = models.TextField(max_length=140)
+    

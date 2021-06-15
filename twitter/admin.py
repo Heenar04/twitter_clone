@@ -1,5 +1,7 @@
 from django.contrib import admin
-
+from .models import Tweetclone, Contact
 # Register your models here.
-from .models import Tweetclone
+
 admin.site.register(Tweetclone)
+admin.site.register(Contact)
+
