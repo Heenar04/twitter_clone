@@ -2,42 +2,31 @@
 {% load static %}
 
 
- <div class="header">
-    <div class="header-right">
-      <link img class="logo" src="{% static 'img/home.png' %}">Home</img>
-      <a href="#Home"></a>
-      <a href="#contact">Contact</a>
-      <!-- <a href="#Home">Home</a> -->
+ <h3>
+    <div class="cont">
+      <link img class="contact_image" src="{% static 'img/home.png' %}"></img>
+      <a href="{% url 'Tweet' %}">Home</a>
+      <a href="{% url 'contacts' %}">Contact</a>
+    
     </div>
-  </div>
+ </h3>
 <section class="contact">
     <section class="contact_post">
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
-          <input type="text" name="name" placeholder="Name" required>
-          <textarea name="body" name="Post here " placeholder="Tell us something!" required></textarea>
+          <input type="text" name="name" placeholder="Name" required><br>
+          <br>
+          <textarea name="body" name="Post here " placeholder="Email" required></textarea><br>
           <!-- <input type="file" value="add image" name='image'> -->
           <!-- {{ form.image}}{{ form.image}} -here type is file is type so commented that ->
 -->
-          <input type="email"  name="email">
+          <input type="email"  name="email" placeholder="Tell us something!"><br>
           <input type="submit" value="post">
 
 
         </form>
     </section>
-    <!-- <section class="contacts">
-        <ul>
-        {% for contacts in contact %}
-        <li>
-            
-           <div class="name_body">
-           <div class="name">  {{ contact.name}}</div>
-           <p>  {{ contact.body }}</p>
-           </div>
-         </li>
-        {% endfor %}
-        </ul>
-    </section> -->
+ 
 </section>
 
 {% endblock %}

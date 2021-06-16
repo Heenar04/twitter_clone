@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %} 
+{% load static %}
+{% load cloudinary %}
+
+ <div class="header">
+    <div class="header-right">
+      <img src="{% static 'img/home.png' %}" style="width: 5%;"></img>
+      <a href="{% url 'Tweet' %}">Home</a>
+      <a href="{% url 'contacts' %}">Contact</a>
+  
+      
+      <!-- <a href="#about">About</a> -->
+    </div>
+  </div>
+<section class="content">
+    <section class="edit_post">
+        <form action="/edit/{{tweet.id}}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="text" name="name" value="{{tweet.name}}" required><br>
+          <input type="text" name="name" value="{{tweet.body}}" required><br>
+
+          <!-- <textarea name="body" name="Post here " value="{{tweet.body}}" required></textarea><br> -->
+          <img src="{{tweet.image.url}}"/>
+          <input type="file" name='image'>
+
+          <input type="submit" value="post"><br>
+
+
+        </form>
+    </section>
+    {% endblock %}

@@ -1,56 +1,69 @@
 /* 
 common
  *************************************/
- html,
+ html{
+    margin: -8% auto;     
+    height: auto;
+ }
+ 
+ header{
+     width: 172%;
+     font-weight: bolder;
+    font-size: xx-large;
+     
+ }
+
  body{
      height: 100%;
-     margin-left: 20%;
-     background-color:aquamarine;
- 
+     margin: 10%;
+     background-color:rgb(230, 208, 180) 
  }
+ 
  .tweet_post{
      font-size: 20px;
      font-weight: bolder;
  }
  .content{
-     max-width: 6000px;
+     /* max-width: 6000px; */
      height: 100%;
-     margin: 0 auto;
      border-left: 1px solid black;
      border-right: 1px solid black;
- }
- header{
-    font-weight: bolder;
  }
   /* 
   Post 
   ******************** */
  .tweets ul{
-     padding: 0;
- 
+     padding: 0.5em; ;
+    border: bottom 0.2em;;
  
  }
- 
+
+ form{
+     margin: 3% ;
+     border-bottom: blue;
+     border-width: 2em;
+ }
   .tweets li {
-      display: flex;
-      padding: 17px;
-     border-bottom: 1px solid black;
-  }
+    display: flex;
+    border-bottom: 3px solid black;
+    /* width: 20%; */
+    grid-auto-columns: auto;
+
+}
   .tweets li .logo {
  
       flex-basis: 15%;
   }
  
-  .tweets li .logo img{
+  /* .tweets li .logo img{
       width: 60%;
-  } 
-   .tweets li .name_body{
+  }  */
+   .tweets li .name{
       flex-basis: 85%;
+      font-weight: bolder;
+
   } 
-  .tweets li .name_body{
-      font-weight: bold;
-  }
-  .tweets li .name_body .datetime{
+  .tweets li .name_body {
       color: gray;
   }
   @media screen and (max-width: 500px){
@@ -60,37 +73,22 @@ common
  
       
   }
+.contact{
+    width: 100%;
+}
+  .contact_post{
+      height: 80px;
+      width: 100%;    
 
-  /* contact  */
-  /* .tweets ul{
-    padding: 0;
+  }
 
+  .contact_image{
+      width: fit-content;
+  }
 
-} */
+  /* EDIT */
 
- /* .contacts li {
-     display: flex;
-     padding: 17px;
-    border-bottom: 1px solid black;
- }
- .contacts li .logo {
-
-     flex-basis: 15%;
- }
-
-  .contacts li .name_body{
-     flex-basis: 85%;
- } 
- .contacts li .name_body{
-     font-weight: bold;
- }
- .contacts li .name_body .datetime{
-     color: gray;
- }
- @media screen and (max-width: 500px){
-     .posts li .name_body .name {
-         font-size: 20px;
-     }
-
-     
- } */
+  .edit_post {
+      height: auto;
+      width: auto;
+  }

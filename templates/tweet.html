@@ -1,26 +1,36 @@
 {% extends "base.html" %} {% block content %} 
 {% load static %}
 {% load cloudinary %}
-
+<html lang="en">
+    <head> 
+    </head>
+<body>
  <div class="header">
     <div class="header-right">
-      <img class="logo" src="{% static 'img/home.png' %}"></img>
-      <a href="#Home">Home</a>
-      <a href="{% url 'contacts' %}">Contact</a>
+      <img src="{% static 'img/home.png' %}" style="width: 5%;"></img>
+      
       <!-- <a href="#about">About</a> -->
-    </div>
-  </div>
+    <!-- </div>
+<div class="header"> -->
+  <a href="{% url 'Tweet' %}">Home</a>
+  <a href="{% url 'contacts' %}">Contact</a>
+  
+
+  <!-- </div> -->
+
+ </div>
 <section class="content">
     <section class="tweet_post">
         <form action="/" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
-          <input type="text" name="name" placeholder="Name" required>
-          <textarea name="body" name="Post here " placeholder="wr" required></textarea>
+          <input type="text" name="name" placeholder="Name" style="width: fit-content;" required><br>
+          <br>
+          <textarea name="body" name="Post here " placeholder="Tell us something " required></textarea><br>
           {{form.image}}
           <!-- <input type="file" value="add image" name='image'> -->
           <!-- {{ form.image}}{{ form.image}} -here type is file is type so commented that ->
 -->
-          <input type="submit" value="post">
+          <input type="submit" value="post"><br>
 
 
         </form>
@@ -35,12 +45,21 @@
            <div class="datecreated"> {{ tweets.created_at}}</div>
            <p>  {{ tweets.body }}</p>
            <img src='{{ tweets.image.url}}' style="width: 300px">
-           <a href="/delete/{{tweets.id}}">delete</a>
+           <a href="/like/{{tweets.id}}"><img src="{% static 'img/heart.png' %}" style="width: 5%"></a>
+            {{tweets.like_count}}
+           <a href="/edit/{{tweets.id}}">Edit</a>
+           
+          <!-- <a>Button Pressed: {{ButtonPressed}} </a> -->
+          <!-- <input type="submit" value="Like Me" > -->
+         
+           <a href="/delete/{{tweets.id}}">Delete</a>
+
            </div>
          </li>
         {% endfor %}
         </ul>
     </section>
 </section>
-
+</body>
 {% endblock %}
+</html>
