@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 import cloudinary
@@ -144,3 +145,4 @@ cloudinary.config(
   api_key = "725332466165313", 
   api_secret = "-8tpBlYhPfYMceidHzzeElkElCY" 
 )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
