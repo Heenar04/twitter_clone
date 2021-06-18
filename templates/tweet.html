@@ -39,7 +39,10 @@
         <ul>
         {% for tweets in tweet %}
         <li>
-            
+          {% load static %}
+
+           <img class="profile" src="{% static 'img/user.png' %} ">  
+           <img class="menu_icon" src="{% static 'img/menu.png' %} ">  
            <div class="name_body">
            <div class="name">  {{ tweets.name}}</div>
            <div class="datecreated"> {{ tweets.created_at}}</div>

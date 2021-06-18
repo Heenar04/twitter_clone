@@ -16,7 +16,7 @@ common
  body{
      height: 100%;
      margin: 10%;
-     background-color:rgb(230, 208, 180) 
+     background-color:rgb(243, 242, 240) 
  }
  
  .tweet_post{
@@ -48,6 +48,7 @@ common
     border-bottom: 3px solid black;
     /* width: 20%; */
     grid-auto-columns: auto;
+    position: relative;
 
 }
   .tweets li .logo {
@@ -61,10 +62,34 @@ common
    .tweets li .name{
       flex-basis: 85%;
       font-weight: bolder;
+      color: black;
+      font-size: large;
+      padding:8px;
 
   } 
   .tweets li .name_body {
-      color: gray;
+      color:black;
+  }
+  
+  .tweets li  .profile{
+    width: 105px;
+    padding: 10px 15px;
+    position: relative;
+
+}
+ .tweets li .menu_icon{
+      width: 20px;
+      position: absolute;
+      top: 40px;
+      right: 15px;
+      border: 1px solid cornsilk;
+      padding: 10px 15px;
+      font-size: 13px;
+      border-radius: 3px;
+
+  }
+  .tweets li .menu_icon{
+      text-decoration: none;
   }
   @media screen and (max-width: 500px){
       .posts li .name_body .name {
