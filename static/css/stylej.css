@@ -1,0 +1,138 @@
+/* 
+common
+ *************************************/
+ html,body{
+    /* margin: -8% auto;      */
+    height: auto;
+ }
+ 
+ header{
+     width:auto;
+     font-weight: bolder;
+     font-size: xx-large;
+     
+ }
+ 
+ body{
+     height: 100%;
+     margin: 10%;
+     background-color:rgb(243, 242, 240) 
+ }
+ 
+ .tweet_post{
+     font-size: 20px;
+     font-weight: bolder;
+ }
+ .content{
+     /* max-width: 6000px; */
+     height: 100%;
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+ }
+  /* 
+  Post 
+  ******************** */
+ .tweets ul{
+    padding: 0 ;
+    border: bottom 0.2em;;
+ 
+ }
+
+ form{
+     margin: 3% ;
+     border-bottom: blue;
+     border-width: 2em;
+ }
+  .tweets li {
+    display: flex;
+    border-bottom: 1px solid black;
+    /* width: 20%; */
+    grid-auto-columns: auto;
+    position: relative;
+    padding: 17px;
+
+}
+  .tweets li .logo {
+ 
+      flex-basis: 15%;
+  }
+ 
+  /* .tweets li .logo img{
+      width: 60%;
+  }  */
+   .tweets li .name{
+      flex-basis: 85%;
+      font-weight: bold;
+      color: black;
+      font-size: large;
+      padding:8px;
+
+  } 
+  .tweets li .name_body {
+      flex-basis: 15%;
+      color:black;
+  }
+  
+  .tweets li  .profile{
+    width: 167px;
+    height: 108px;
+    padding: 35px 27px;
+    position: relative;
+
+}
+ .tweets li .menu_icon{
+      width: 20px;
+      position: absolute;
+      top: 40px;
+      right: 15px;
+      /* border: 1px solid cornsilk; */
+      padding: 10px 15px;
+      font-size: 13px;
+      border-radius: 3px;
+      list-style: none;
+    text-decoration: none;
+  }
+  .tweets li .menu{
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    border: 1px solid cornsilk;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 3px;
+    background-color: white;
+  }
+  .tweets li .menu a{
+      text-decoration: none;
+  }
+  
+  .tweets li .menu_icon{
+      text-decoration: none;
+  }
+  @media screen and (max-width: 500px){
+      .posts li .name_body .name {
+          font-size: 20px;
+      }
+ 
+      
+  }
+
+.contact{
+    width: 100%;
+}
+  .contact_post{
+      height: 80px;
+      width: 100%;    
+
+  }
+
+  .contact_image{
+      width: fit-content;
+  }
+
+  /* EDIT */
+
+  .edit_post {
+      height: auto;
+      width: auto;
+  }

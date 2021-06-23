@@ -23,7 +23,7 @@
     <section class="tweet_post">
         <form action="/" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
-          <input type="text" name="name" placeholder="Name" style="width: fit-content;" required><br>
+          <input type="text" name="name" placeholder="Name" style="width: fit-content; font-weight: bold;" required><br>
           <br>
           <textarea name="body" name="Post here " placeholder="Tell us something " required></textarea><br>
           {{form.image}}
@@ -42,9 +42,13 @@
           {% load static %}
 
            <img class="profile" src="{% static 'img/user.png' %} ">  
-           <img class="menu_icon" src="{% static 'img/menu.png' %} ">  
+           <div class="menu">
+            <a href="/delete/{{tweets.id}}">Delete</a>
+
+           </div>
+           <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %} ">  
            <div class="name_body">
-           <div class="name">  {{ tweets.name}}</div>
+           <div class="name" style="font-weight: bold;">  {{ tweets.name}}</div>
            <div class="datecreated"> {{ tweets.created_at}}</div>
            <p>  {{ tweets.body }}</p>
            <img src='{{ tweets.image.url}}' style="width: 300px">
@@ -55,14 +59,19 @@
           <!-- <a>Button Pressed: {{ButtonPressed}} </a> -->
           <!-- <input type="submit" value="Like Me" > -->
          
-           <a href="/delete/{{tweets.id}}">Delete</a>
 
            </div>
          </li>
         {% endfor %}
+        
         </ul>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/tweets.js'%"></script>
 </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/tweets.js'%"></script>
+
 </body>
 {% endblock %}
 </html>

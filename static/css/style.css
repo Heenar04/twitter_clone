@@ -1,103 +1,95 @@
 /* 
 common
  *************************************/
- html{
-    margin: -8% auto;     
-    height: auto;
- }
- 
- header{
-     width: 172%;
-     font-weight: bolder;
-    font-size: xx-large;
-     
- }
-
+ html,
  body{
      height: 100%;
-     margin: 10%;
-     background-color:rgb(243, 242, 240) 
- }
+     margin-left: 5% ;
  
+ }
  .tweet_post{
      font-size: 20px;
-     font-weight: bolder;
+     margin: 20px;
+    
  }
  .content{
-     /* max-width: 6000px; */
+     max-width: 6000px;
      height: 100%;
+     margin: 2px auto;
      border-left: 1px solid black;
      border-right: 1px solid black;
  }
   /* 
-  Post 
+  tweet 
   ******************** */
  .tweets ul{
-     padding: 0.5em; ;
-    border: bottom 0.2em;;
+     padding: 0;
  
  }
-
- form{
-     margin: 3% ;
-     border-bottom: blue;
-     border-width: 2em;
- }
+ 
   .tweets li {
-    display: flex;
-    border-bottom: 3px solid black;
-    /* width: 20%; */
-    grid-auto-columns: auto;
-    position: relative;
-
-}
-  .tweets li .logo {
- 
+      display: flex;
+      padding: 17px;
+     border-bottom: 1px solid black;
+  }
+  header  .logo {
+    position: absolute;
       flex-basis: 15%;
   }
  
-  /* .tweets li .logo img{
+  .tweets li .logo img{
       width: 60%;
-  }  */
-   .tweets li .name{
-      flex-basis: 85%;
-      font-weight: bolder;
-      color: black;
-      font-size: large;
-      padding:8px;
-
   } 
-  .tweets li .name_body {
-      color:black;
-  }
+   .tweets li .name_body{
+      flex-basis: 85%;
+  } 
   
-  .tweets li  .profile{
-    width: 105px;
+  .tweets li .name_body .datetime{
+      color: gray;
+  }
+ .tweets li .profile{
+     
+    width: 17%;
+    height: 120px;
+    padding: 8px;
+
+ }
+  .tweets li .menu_icon{
+    width: 20px;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    /* border: 1px solid cornsilk; */
     padding: 10px 15px;
-    position: relative;
+    font-size: 13px;
+    border-radius: 3px;
+    list-style: none;
+    text-decoration: none;
 
 }
- .tweets li .menu_icon{
-      width: 20px;
-      position: absolute;
-      top: 40px;
-      right: 15px;
-      border: 1px solid cornsilk;
-      padding: 10px 15px;
-      font-size: 13px;
-      border-radius: 3px;
+.tweets li .menu{
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  border: 1px solid cornsilk;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 3px;
+  background-color: white;
+}
+  .tweets li .menu a{
+    text-decoration: none;
+}
 
-  }
-  .tweets li .menu_icon{
-      text-decoration: none;
-  }
+
   @media screen and (max-width: 500px){
-      .posts li .name_body .name {
+      .tweets li .name_body .name {
           font-size: 20px;
       }
  
       
   }
+   
 .contact{
     width: 100%;
 }
