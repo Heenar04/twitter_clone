@@ -1,31 +1,35 @@
-{% extends "base.html" %} {% block content %} 
+{% extends "base.html" %} {% block content %}
 {% load static %}
 {% load cloudinary %}
 
- <div class="header">
-    <div class="header-right">
-      <img src="{% static 'img/home.png' %}" style="width: 5%;"></img>
-      <a href="{% url 'Tweet' %}">Home</a>
-      <a href="{% url 'contacts' %}">Contact</a>
-  
-      
-      <!-- <a href="#about">About</a> -->
-    </div>
+<div class="header">
+  <div class="header-right">
+    <img src="{% static 'img/home.png' %}" style="width: 5%;"></img>
+    <a href="{% url 'Tweet' %}">Home</a>
+    <a href="{% url 'contacts' %}">Contact</a>
+
+
+    <!-- <a href="#about">About</a> -->
   </div>
-<section class="content">
-    <section class="edit_post">
-        <form action="/edit/{{tweet.id}}" method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-          <input type="text" name="name" value="{{tweet.name}}" required><br>
-          <input type="text" name="name" value="{{tweet.body}}" required><br>
-
-          <!-- <textarea name="body" name="Post here " value="{{tweet.body}}" required></textarea><br> -->
-          <img src="{{tweet.image.url}}"/>
-          <input type="file" name='image'>
-
-          <input type="submit" value="post"><br>
+</div>
+<section class="edit">
+  <section class="edit_post">
+    <form action="/edit/{{tweet.id}}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
 
 
-        </form>
-    </section>
-    {% endblock %}
+      <input type="text" name="name" value="{{tweet.name}}" required><br>
+      <br>
+      <input type="text" name="body" value="{{tweet.body}}" required><br>
+<br>
+
+        <!-- <textarea name="body" name="Post here " value="{{tweet.body}}" required></textarea><br> -->
+        <img src="{{tweet.image.url}}" />
+        <input type="file" name='image'>
+
+        <input type="submit" value="Tweet" style="background-color:black;width: 10%; color: white;"><br>
+
+
+    </form>
+  </section>
+  {% endblock %}

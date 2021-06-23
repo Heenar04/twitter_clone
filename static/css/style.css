@@ -3,13 +3,18 @@ common
  *************************************/
  html,
  body{
-     height: 100%;
-     margin-left: 5% ;
+    
+     margin:2% ;
  
+ }
+ h1{
+     text-align: center;
  }
  .tweet_post{
      font-size: 20px;
      margin: 20px;
+     padding: 5px;
+     border-bottom: 3px solid black;
     
  }
  .content{
@@ -49,9 +54,9 @@ common
   }
  .tweets li .profile{
      
-    width: 17%;
-    height: 120px;
-    padding: 8px;
+    width: 10%;
+    height: 10%;
+    padding: 10px;
 
  }
   .tweets li .menu_icon{
@@ -89,8 +94,12 @@ common
  
       
   }
-   
-.contact{
+   .contact {
+    border: 2px solid black;
+    margin: 2%;
+    padding: 2%;
+   }
+/* .contact{
     width: 100%;
 }
   .contact_post{
@@ -101,11 +110,25 @@ common
 
   .contact_image{
       width: fit-content;
-  }
+  } */
 
   /* EDIT */
 
-  .edit_post {
-      height: auto;
-      width: auto;
+  .edit_post form {
+    height: 20%;
+    border: 2px solid black;
+    margin: 2%;
+    padding: 2%;
   }
+
+  .edit img{
+      border: 5%;
+  }
+  .edit{
+    
+    height: auto;
+    margin: 2%;
+    
+}
+
+  

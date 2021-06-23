@@ -30,7 +30,7 @@
           <!-- <input type="file" value="add image" name='image'> -->
           <!-- {{ form.image}}{{ form.image}} -here type is file is type so commented that ->
 -->
-          <input type="submit" value="post"><br>
+          <input type="submit" value="Tweet" style="background-color:black; color: white;"><br>
 
 
         </form>
@@ -43,7 +43,6 @@
 
            <img class="profile" src="{% static 'img/user.png' %} ">  
            <div class="menu">
-            <a href="/delete/{{tweets.id}}">Delete</a>
 
            </div>
            <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %} ">  
@@ -52,10 +51,14 @@
            <div class="datecreated"> {{ tweets.created_at}}</div>
            <p>  {{ tweets.body }}</p>
            <img src='{{ tweets.image.url}}' style="width: 300px">
-           <a href="/like/{{tweets.id}}"><img src="{% static 'img/heart.png' %}" style="width: 5%"></a>
+           <div>
+           <a href="/like/{{tweets.id}}"><img src="{% static 'img/heart.png' %}" style="width: 2%"></a>
             {{tweets.like_count}}
+          </div>
+          <div>
            <a href="/edit/{{tweets.id}}">Edit</a>
-           
+           <a href="/delete/{{tweets.id}}">Delete</a>
+          </div>
           <!-- <a>Button Pressed: {{ButtonPressed}} </a> -->
           <!-- <input type="submit" value="Like Me" > -->
          
