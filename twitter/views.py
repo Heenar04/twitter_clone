@@ -20,7 +20,7 @@ def Tweet(request):
         # else error
         else:
             return HttpResponseRedirect(form.errors.as_json())
-
+    
 
     tweet = Tweetclone.objects.order_by('created_at').reverse().all()[:20]
     return render(request, 'tweet.html',
@@ -58,25 +58,20 @@ def Contacts(request):
     return render(request, 'contact.html')
 
 def edit(request, id):
-    #  edit post
-    
-    post = Tweetclone.objects.get(id = id)
-    if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-        
-        # if form is valid
-            if form.is_valid():
-        # yes,save
-                form.save()
-        # redirect to home page 
-                return HttpResponseRedirect('/')
-        # else error
-            else:
-                return HttpResponseRedirect(form.errors.as_json())
-
-    else:
-        form= PostForm
-        return render(request,'edit.html',{'tweet': post ,'form': form})
+     post = Tweetclone.objects.get(id = id)
+     print(post)
+     if request.method == 'POST':
+         form = PostForm(request.POST, request.FILES, instance=post)
+         if form.is_valid():
+             form.save()
+             return HttpResponseRedirect('/')
+         else:
+             return HttpResponseRedirect(form.errors.as_json())
+     else:
+    # Show editting screen
+        form = PostForm
+        return render(request, 'edit.html',
+        {'tweet': post, 'form': form})
 
 def like(request, id):
       # Get requested tweet

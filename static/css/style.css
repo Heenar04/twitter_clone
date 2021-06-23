@@ -59,6 +59,7 @@ common
     padding: 10px;
 
  }
+ 
   .tweets li .menu_icon{
     width: 20px;
     position: absolute;
@@ -105,9 +106,7 @@ common
   .contact_post{
       height: 80px;
       width: 100%;    
-
   }
-
   .contact_image{
       width: fit-content;
   } */
@@ -131,5 +130,3 @@ common
     margin: 2%;
     
 }
-
-  

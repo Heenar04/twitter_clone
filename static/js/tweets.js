@@ -1,6 +1,6 @@
 
-$(function(){
-    $('.js-menu-icon').click(function(){
-        alert('Clicked!!')
-    })
-})
+// $(function(){
+//     $('.js-menu-icon').click(function(){
+//         alert('Clicked!!')
+//     })
+// })
