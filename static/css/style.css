@@ -36,6 +36,7 @@ common
       display: flex;
       padding: 17px;
      border-bottom: 1px solid black;
+     position: relative;
   }
   header  .logo {
     position: absolute;
@@ -63,14 +64,14 @@ common
   .tweets li .menu_icon{
     width: 20px;
     position: absolute;
-    top: 40px;
+    top: 10px;
     right: 15px;
-    /* border: 1px solid cornsilk; */
+    /* border: 1px solid black;
     padding: 10px 15px;
     font-size: 13px;
     border-radius: 3px;
     list-style: none;
-    text-decoration: none;
+    text-decoration: none; */
 
 }
 .tweets li .menu{
@@ -82,11 +83,13 @@ common
   font-size: 13px;
   border-radius: 3px;
   background-color: white;
+  display: none;
 }
   .tweets li .menu a{
     text-decoration: none;
 }
-
+/* .hidden{ display:inline-block;
+    visibility: initial;} */
 
   @media screen and (max-width: 500px){
       .tweets li .name_body .name {

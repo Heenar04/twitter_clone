@@ -42,23 +42,26 @@
           {% load static %}
 
            <img class="profile" src="{% static 'img/user.png' %} ">  
-           <div class="menu">
+           <div class="menu hidden"   id= 'menu' >
+            <a href="/edit/{{tweets.id}}/" style="background-color:black; color: white;">Edit</a><br>
+            <br>
+            <a href="/delete/{{tweets.id}}/" style="background-color:black; color: white; ">Delete</a>
 
            </div>
-           <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %} ">  
+           <img class="menu_icon " src="{% static 'img/menu.png' %} " onclick="myFunction()">  
            <div class="name_body">
            <div class="name" style="font-weight: bold;">  {{ tweets.name}}</div>
            <div class="datecreated"> {{ tweets.created_at}}</div>
            <p>  {{ tweets.body }}</p>
            <img src='{{ tweets.image.url}}' style="width: 300px">
            <div>
-           <a href="/like/{{tweets.id}}"><img src="{% static 'img/heart.png' %}" style="width: 2%"></a>
+           <a href="/like/{{tweets.id}}/"><img src="{% static 'img/heart.png' %}" style="width: 2%"></a>
             {{tweets.like_count}}
           </div>
-          <div>
-           <a href="/edit/{{tweets.id}}" ><button style="background-color:black; color: white;">Edit</button></a>
-           <a href="/delete/{{tweets.id}}" ><button style="background-color:black; color: white;">Delete</button></a>
-          </div>
+          <!-- <div>
+           <a href="/edit/{{tweets.id}}/" ><button style="background-color:black; color: white;">Edit</button></a>
+           <a href="/delete/{{tweets.id}}/" ><button style="background-color:black; color: white;">Delete</button></a>
+          </div> -->
           <!-- <a>Button Pressed: {{ButtonPressed}} </a> -->
           <!-- <input type="submit" value="Like Me" > -->
          
@@ -72,9 +75,40 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
     <!-- <script src="{% static 'js/tweets.js'%"></script> -->
 </section>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
-    <!-- <script src="{% static 'js/tweets.js'%"></script> -->
+    <script src="{% static 'js/tweets.js'%"></script>
 
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";   
+  } else {
+    x.style.display = "block";
+  }
+    }
+
+    // block it will show 
+    // none is not show
+    </script>
 </body>
 {% endblock %}
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> 
+<!-- Popover JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script><script>
+
+</script>
+<script>
+
+</script>
+<!-- <script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+  
+  var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+      container: 'body'
+    })
+  </script>  -->
