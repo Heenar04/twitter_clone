@@ -21,7 +21,11 @@ The application is able to track the like counts and also able to update the pos
 * Heroku
 
 
+<<<<<<< HEAD
 ![Twitter](./gif/ezgif.com-gif-maker.gif)
+=======
+![Twitter](gif\gzgif.com-gif-maker.gif)
+>>>>>>> 3b8d9f44892f31446a5a6f63047477d0c5a0da3d
 
 ## Demo 
 Check out [LIVE DEMO](https://heena-twitterclone.herokuapp.com/) here!!
