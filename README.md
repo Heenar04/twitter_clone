@@ -1,4 +1,5 @@
 # twitter_clone
+
  ![](.static/gif/ezgif.com-gif-maker(2).gif)
 
 An application that would be able to view create and delete the posts done by the user . 
