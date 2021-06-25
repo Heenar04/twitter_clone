@@ -1,5 +1,5 @@
 # twitter_clone
- ![](.static\gif\ezgif.com-gif-maker(2).gif)
+
 
 An application that would be able to view create and delete the posts done by the user . 
 The application is able to track the like counts and also able to update the posts  .
@@ -21,7 +21,7 @@ The application is able to track the like counts and also able to update the pos
 * Heroku
 
 
-
+![Twitter](static/gif/ezgif.com-gif-maker (2).gif)
 
 ## Demo 
 Check out [LIVE DEMO](https://heena-twitterclone.herokuapp.com/) here!!
