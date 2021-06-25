@@ -1,5 +1,5 @@
 # twitter_clone
-
+ ! [](static/gif/demo. gif)
 
 An application that would be able to view create and delete the posts done by the user . 
 The application is able to track the like counts and also able to update the posts  .
