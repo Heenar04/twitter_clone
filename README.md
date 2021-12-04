@@ -1,9 +1,11 @@
-# twitter_clone
+# Twitter_clone
 
 
 An application that would be able to view create and delete the posts done by the user . 
 The application is able to track the like counts and also able to update the posts  .
 
+## Demo 
+Check out [LIVE DEMO](https://heena-twitterclone.herokuapp.com/) here!!
 
 ## Installation  and run
 
@@ -24,5 +26,4 @@ The application is able to track the like counts and also able to update the pos
 ![Twitter](./gif/ezgif.com-gif-maker.gif)
 
 
-## Demo 
-Check out [LIVE DEMO](https://heena-twitterclone.herokuapp.com/) here!!
+
